@@ -1,0 +1,95 @@
+- name: "disable-sound-synapse"
+  signals:
+    - order:
+        text: "coupe le son"
+        matching-type: "ordered-strict"
+    - order:
+        text: "coupe le son Travis"
+        matching-type: "ordered-strict"
+    - order:
+        text: "coupe le son s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "coupe le son s'il te plaît Travis"
+        matching-type: "ordered-strict"
+    - order: "coupe le son de l'enceinte"
+  neurons:
+    - shell:
+        cmd: "mplayer ./resources/sounds/mute.mp3 && amixer sset Master 0%"
+
+- name: "enable-sound-synapse"
+  signals:
+    - order:
+        text: "remets le son"
+        matching-type: "ordered-strict"
+    - order: "remettre le son"
+    - order:
+        text: "remets le son s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "remets le son Travis"
+        matching-type: "ordered-strict"
+    - order:
+        text: "remets le son s'il te plaît Travis"
+        matching-type: "ordered-strict"
+  neurons:
+    - shell:
+        cmd: "mplayer ./resources/sounds/mute.mp3 && amixer sset Master 80%"
+
+- name: "less-sound-synapse"
+  signals:
+    - order:
+        text: "moins fort"
+        matching-type: "ordered-strict"
+    - order: "baisse le volume"
+    - order: "baisse le son"
+    - order:
+        text: "moins fort s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "mets moins fort"
+        matching-type: "ordered-strict"
+    - order:
+        text: "mets moins fort s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "tu peux mettre moins fort s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "tu peux mettre moins fort s'il te plaît Travis"
+        matching-type: "ordered-strict"
+  neurons:
+    - shell:
+        cmd: "mplayer ./resources/sounds/mute.mp3 && amixer sset Master 10%-"
+
+- name: "more-sound-synapse"
+  signals:
+    - order:
+        text: "plus fort"
+        matching-type: "ordered-strict"
+    - order: "monte le volume"
+    - order: "augmente le volume"
+    - order: "monte le son"
+    - order:
+        text: "plus fort s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "mets plus fort"
+        matching-type: "ordered-strict"
+    - order:
+        text: "mets plus fort s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "tu peux mettre plus fort"
+        matching-type: "ordered-strict"
+    - order:
+        text: "tu peux mettre plus fort s'il te plaît"
+        matching-type: "ordered-strict"
+    - order:
+        text: "tu peux mettre plus fort s'il te plaît Travis"
+        matching-type: "ordered-strict"
+  neurons:
+    - shell:
+        cmd: "mplayer ./resources/sounds/mute.mp3 && amixer sset Master 10%+"
+
+
